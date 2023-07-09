@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Search and Evaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #candidatesList {
+            margin-bottom: 40px;
+        }
+
+        #candidatesList h2 {
+            margin-bottom: 10px;
+        }
+
+        #candidatesList ul li {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        #rankingSection {
+            margin-top: 40px;
+        }
+
+        #rankingSection h2 {
+            margin-bottom: 10px;
+        }
+
+        #rankingSection ul li {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Candidate Search and Evaluation</h1>
+
+    <!-- Search Form -->
+    <div>
+        <h2>Search Candidates</h2>
+        <form id="searchForm">
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location">
+
+            <label for="jobRole">Job Role:</label>
+            <input type="text" id="jobRole" placeholder="Enter job role">
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Candidates List -->
+    <div id="candidatesList">
+        <h2>Fetched Candidates</h2>
+        <ul id="candidates">
+            <!-- Fetched candidates will be dynamically added here -->
+        </ul>
+    </div>
+
+    <!-- Ranking and Evaluation -->
+    <div id="rankingSection">
+        <h2>Ranking and Evaluation</h2>
+        <ul id="rankingList">
+            <!-- Fetched candidates can be added here for ranking and evaluation -->
+        </ul>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // Simulated data for candidates (replace with your actual data)
+        const candidatesData = [
+            { name: "John Doe", location: "New York", jobRole: "Software Engineer" },
+            { name: "Jane Smith", location: "San Francisco", jobRole: "Product Manager" },
+            { name: "David Johnson", location: "London", jobRole: "Data Analyst" },
+            { name: "Emily Davis", location: "New York", jobRole: "UX Designer" },
+            { name: "Michael Wilson", location: "San Francisco", jobRole: "Software Engineer" }
+        ];
+
+        // Function to search candidates based on location and job role
+        function searchCandidates(location, jobRole) {
+            // Filter candidates based on location and job role
+            const filteredCandidates = candidatesData.filter(candidate =>
+                candidate.location.toLowerCase() === location.toLowerCase() &&
+                candidate.jobRole.toLowerCase() === jobRole.toLowerCase()
+            );
+
+            return filteredCandidates;
+        }
+
+        // Function to display the fetched candidates in the candidates list
+        function displayCandidates(candidates) {
+            const candidatesList = document.getElementById("candidates");
+            candidatesList.innerHTML = ""; // Clear previous list
+
+            candidates.forEach(candidate => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${candidate.name} - ${candidate.location}, ${candidate.jobRole}`;
+                listItem.addEventListener("click", function () {
+                    addToRanking(candidate);
+                });
+                candidatesList.appendChild(listItem);
+            });
+        }
+
+        // Function to add a candidate to the ranking list
+        function addToRanking(candidate) {
+            const rankingList = document.getElementById("rankingList");
+            const listItem = document.createElement("li");
+            listItem.textContent = `${candidate.name} - ${candidate.location}, ${candidate.jobRole}`;
+            listItem.addEventListener("click", function () {
+                removeFromRanking(candidate);
+            });
+            rankingList.appendChild(listItem);
+        }
+
+        // Function to remove a candidate from the ranking list
+        function removeFromRanking(candidate) {
+            const rankingList = document.getElementById("rankingList");
+            const listItem = Array.from(rankingList.getElementsByTagName("li")).find(li =>
+                li.textContent.includes(candidate.name)
+            );
+            if (listItem) {
+                rankingList.removeChild(listItem);
+            }
+        }
+
+        // Event listener for the search form submission
+        const searchForm = document.getElementById("searchForm");
+        searchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get the search input values
+            const locationInput = document.getElementById("location");
+            const jobRoleInput = document.getElementById("jobRole");
+            const location = locationInput.value.trim();
+            const jobRole = jobRoleInput.value.trim();
+
+            //search candidates and display the fetched candidates
+            const searchedCandidates = searchCandidates(location, jobRole);
+            displayCandidates(searchedCandidates);
+
+            // Clear the search inputs
+            locationInput.value = "";
+            jobRoleInput.value = "";
+        });
+
+        addToRanking(candidatesData[0]); // Add the first candidate from the data to the ranking list
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.menu-section {
+    display: flex;
+    background-color: #B1B8BD;
+}
+
+.logo {
+    height: 88px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+}
+
+.logo img {
+    width: 160px;
+    height: 37px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    margin-right: 8%;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #0C121F;
+    font-size: large;
+}
+
+/* main content section style */
+.main-content {
+    width: 689px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.main-content h1 {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 35px;
+}
+
+.main-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button button {
+    padding: 15px 20px;
+    border: 5px solid #556DF4;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+.main-button button:hover {
+    background-color: rgb(154, 87, 87);
+}
+
+/* header banner style */
+.header-banner {
+    width: 100%;
+    height: 123px;
+    margin-top: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-banner h3 {
+    color: white;
+    font-size: 30px;
+}
+
+/* Revolution style */
+.revolution {
+    margin-top: 8%;
+}
+
+.heading-text p {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 1px;
+}
+
+.heading-text h2 {
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 20px;
+}
+
+.revolution-content {
+    margin-bottom: 15px;
+}
+
+.revolution-content p {
+    font-size: 16px;
+}
+
+.pricing-link a {
+    text-decoration: none;
+}
+
+.work-button {
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+/* review style */
+.review {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.all-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5%;
+}
+
+.review h2 {
+    letter-spacing: 1px;
+}
+
+.review-card {
+    background-color: #EDEDED;
+    text-align: left;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.review-person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-person p {
+    color: #154FC1;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.black-box {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    margin-left: 80px;
+}
+
+i {
+    color: #FFD700;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.review-days {
+    color: #555555;
+}
+
+card-content {
+    color: #333333;
+    font-size: 140px;
+}
+
+/* expertise style */
+.expertise-heading {
+    margin-top: 8%;
+    margin-left: 20px;
+}
+
+.all-expertise {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.expertise {
+    flex: 1 0 25%;
+    margin: 0 10px;
+    max-width: calc(25% - 20px);
+}
+
+.expertise-body {
+    height: 150px;
+}
+
+.expertise-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+/* network style */
+.network-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.images {
+    flex: 1 0 25%;
+    margin: 10px 20px;
+    max-width: calc(20% - 20px);
+}
+
+.client-button {
+    margin-top: 5%;
+}
+
+/* footer style */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 8%;
+}
+
+.footer-column {
+    flex: 1 0 30%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.footer-text p {
+    width: 80%;
+    margin: 0;
+}
+
+.footer-heading h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter-email {
+    flex: 1;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+.newsletter-button {
+    background-color: #556DF4;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* login form design */
+.form-heding {
+    text-align: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.login-sidebar {
+    width: 25%;
+    background-color: #577186;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-sidebar p {
+    font-size: 16px;
+}
+
+.login-content {
+    width: 50%;
+    padding: 30px;
+    padding-top: 15%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.login-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    margin-bottom: 20px;
+}
+
+.login-input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #577186;
+    border-radius: 25px;
+    margin-bottom: 2%;
+}
+
+
+.login-button {
+    width: 98%;
+    background-color: #fff;
+    color: #210202;
+    border: 2px solid #577186;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.signup-button {
+    width: 95%;
+    background-color: #E40178;
+    color: #fff;
+    border: 2px solid #E40178;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.google-button {
+    width: 98%;
+    margin-top: 3%;
+    background-color: #dc4e41;
+    color: #fff;
+    border: 2px solid dc4e41;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Registration page style */
+.form-heading {
+    text-align: center;
+}
+
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.registration-sidebar {
+    width: 25%;
+    background-color: #577186;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 100vh;
+    padding-top: 2%;
+}
+
+.registration-sidebar p {
+    font-size: 16px;
+}
+
+.registration-content {
+    width: 50%;
+    padding: 30px;
+    padding-top: 15%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.registration-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    margin-bottom: 20px;
+}
+
+.registration-input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #577186;
+    border-radius: 25px;
+    margin-bottom: 2%;
+}
+
+.registration-button {
+    background-color: #fff;
+    color: #210202;
+    border: 2px solid #577186;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+
+  }
+  
